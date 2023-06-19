@@ -17,7 +17,7 @@ public class MainController: ControllerBase
     public async Task<IActionResult> Get()
     {
         var client = _httpClientFactory.CreateClient("meta-api");
-        var response = await client.GetAsync("http://localhost:5000");
+        var response = await client.GetAsync("http://localhost:5122/WeatherForecast");
         var content = await response.Content.ReadAsStringAsync();
         return Ok(content);
     } 
