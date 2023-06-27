@@ -9,6 +9,9 @@ $ dotnet add package Microsoft.Extensions.Http.Polly
 ```
 
 ## Add Polly to HttpClient
+HttpClientFactory를 사용하여 HttpClient를 생성할 때, Polly를 사용하여 재시도 정책을 추가할 수 있다.
+
+Polly를 사용하기 위해서는 우선 Services에 HttpClientFactory를 등록해야 한다.
 ```csharp
 // EX) 1. 
 services.AddHttpClient(name: "ResilientHttpClient",
